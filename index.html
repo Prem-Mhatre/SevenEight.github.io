@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Project 78</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzFIMjJliKAJf4soFO3ORmWl3RGW_bslfNeUlNCM7i6WkV2gID5l6zgs59j5SNFnekE0&usqp=CAU" id="image_family">
+        <h3 id="family_person_name">Nilam</h3>
+        <button onclick="update()">Next</button>
+    </body>
+    <script>
+        var image = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzFIMjJliKAJf4soFO3ORmWl3RGW_bslfNeUlNCM7i6WkV2gID5l6zgs59j5SNFnekE0&usqp=CAU",
+        "https://images.news18.com/ibnlive/uploads/2021/06/1624055313_father-daughter-quotes-3-thumbnail.jpg",
+        "https://i.pinimg.com/originals/08/d6/c0/08d6c0e9dfab3909365b41eca844875f.jpg",
+        "https://www.thebookseller.com/sites/default/files/styles/large/public/uploads/wltb-import/uploads/legacy/shutterstock_8008522.jpg?itok=7xIA-hF5",
+        "https://www.daysoftheyear.com/wp-content/uploads/black-cat-day-1-scaled.jpg",
+        "https://thumbs.dreamstime.com/z/3-color-cat-12153994.jpg"];
+        var names = ["Nilam", "Sunil", "Harshali", "Simba", "Kalu", "Jimmy"];
+        var i = 0;
+        function update(){
+            i++;
+            var number_of_people = 5;
+            if(i > number_of_people){
+            i = 0;
+            }
+            var family_image = image[i];
+            var family_name = names[i];
+
+            document.getElementById("image_family").src = family_image;
+            document.getElementById("family_person_name").innerHTML = family_name;
+        }
+    </script>
+</html>
